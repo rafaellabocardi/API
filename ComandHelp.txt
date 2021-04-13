@@ -1,0 +1,32 @@
+Esse projeto foi criado com base no link abaixo:
+https://itnext.io/asp-net-core-3-1-entity-framework-core-with-postgresql-with-code-first-approach-33b102e1734f
+
+O projeto foi criado com .net Core (5) para rodar é necessário o .net Core SDK
+O banco de dados é postgres
+Mudar a conection string do arquivo appsettings.json
+As extenções usadas no visual code são: (C# for visual Code e C# Extesions)
+
+Foi usado o conceito CLI do .net Core
+######## dotnet core 
+
+O comando abaixo baixa os pacotes que estão vinculados ao projeto
+- dotnet restore
+
+O comando abaixo roda o projeto local
+- dotnet run
+
+######## migrations
+
+Com Padrão de Projeto "Code First", através das migrations o banco é atualizado.
+
+O comando abaixo gera uma migration:
+- dotnet ef migrations add incluirtextodamigration -o Migrations
+
+O comando abaixo remove a ultima migration gerada
+- dotnet ef migrations remove
+
+O comando abaixo atualiza o banco de dados com as migrations que ainda não foram aplicadas
+- dotnet ef database update
+
+O comando abaixo builda o projeto em release
+- dotnet publish -c Release -o ./publish
